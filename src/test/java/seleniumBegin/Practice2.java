@@ -11,9 +11,9 @@ public class Practice2 {
         WebDriverManager.chromedriver().setup(); // this line creates the connection between
         // driver and selenium. AND sets up the driver
 
-        WebDriver driver = new FirefoxDriver(); // instantiating the ChromeDriver instance
+        WebDriver driver = new ChromeDriver(); // instantiating the ChromeDriver instance
         driver.get("https://www.google.com");
-        driver.findElement(By.linkText("Gmail")).click();
+        driver.findElement(By.linkText("Gmai")).click();
 
         String expectedResult = "Gmail";
         boolean check = driver.getTitle().contains(expectedResult);

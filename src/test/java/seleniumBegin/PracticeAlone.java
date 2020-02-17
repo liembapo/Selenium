@@ -4,9 +4,14 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import utilities.SeleniumUtils;
+import utilities.VytrackUtils;
 
+import java.awt.*;
 import java.awt.image.Kernel;
+import java.util.List;
 
 public class PracticeAlone {
     public static void main(String[] args) throws InterruptedException{
@@ -21,8 +26,18 @@ public class PracticeAlone {
 
         driver.findElement(By.id("loginbutton")).click();
 
-        driver.findElement(By.linkText("Beranda")).click();
-        Thread.sleep(5000);
+        WebElement element = driver.findElement(By.linkText("Beranda"));
+        String a = element.getAttribute("href");
+        System.out.println(a);
 
+        List<WebElement> list = driver.findElements(By.tagName("a"));
+        System.out.println(list);
+//        SeleniumUtils.pause(3);
+//
+//        WebElement putComment =driver.findElement(By.xpath("//*[@title='Apa yang Anda pikirkan, Robert?']"));
+//        putComment.click();
+//        putComment.sendKeys("lorem ipsum is dummy sentence that's moving around the world");
+//
+//        driver.findElement(By.xpath("//*[@class ='_88hu']")).click();
     }
 }

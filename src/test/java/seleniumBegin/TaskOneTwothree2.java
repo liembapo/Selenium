@@ -8,8 +8,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.time.Year;
-
 public class TaskOneTwothree2 {
     public static  void main(String[] args) {
 
@@ -19,7 +17,7 @@ public class TaskOneTwothree2 {
         WebDriver driver = new ChromeDriver(); // instantiating the ChromeDriver instance
         driver.manage().window().maximize();
 
-        TaskOneTwoThree1.loginToSmartBear(driver);
+        SmartBearUtility.loginToSmartBear(driver);
 
         driver.findElement(By.xpath("//*[@id=\"ctl00_menu\"]/li[3]/a")).click();
 
